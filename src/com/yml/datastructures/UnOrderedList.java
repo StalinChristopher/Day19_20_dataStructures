@@ -6,10 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class UnOrderedList<T> {
-    static Node head;
+public class UnOrderedList<T extends Comparable> {
+    Node head;
 
-    public static void unorderedList() {
+    public void unorderedList() {
         readFile();
         display();
         getUserInput();
@@ -18,10 +18,9 @@ public class UnOrderedList<T> {
     }
 
     /**
-     * @param <T> 
-     * Read words from words.txt file
+     * @param <T> Read words from words.txt file
      */
-    public static <T> void readFile() {
+    public <T extends Comparable<T>> void readFile() {
         Scanner sc;
         try {
             sc = new Scanner(new File("/Users/stalincd/Documents/Assignments/Day19_20_dataStructures/data/words.txt"));
@@ -45,10 +44,9 @@ public class UnOrderedList<T> {
 
     /**
      * @param <T>
-     * @param data 
-     * add element to the linkedList
+     * @param data add element to the linkedList
      */
-    public static <T> void add(T data) {
+    public <T extends Comparable<T>> void add(T data) {
 
         Node newNode = new Node(data);
 
@@ -65,10 +63,9 @@ public class UnOrderedList<T> {
     }
 
     /**
-     * @param <T> 
-     * Method to display elements of the linkedList
+     * @param <T> Method to display elements of the linkedList
      */
-    public static <T> void display() {
+    public <T> void display() {
         Node temp = head;
         while (temp.next != null) {
             System.out.print(temp.data + "-->");
@@ -78,10 +75,9 @@ public class UnOrderedList<T> {
     }
 
     /**
-     * @param <T> 
-     * Method to obtain user input
+     * @param <T> Method to obtain user input
      */
-    public static <T> void getUserInput() {
+    public <T extends Comparable<T>> void getUserInput() {
         Scanner r = new Scanner(System.in);
         System.out.println("Enter word you wanna search");
         T input = (T) r.next();
@@ -91,10 +87,9 @@ public class UnOrderedList<T> {
 
     /**
      * @param <T>
-     * @param element 
-     * Method to search a given element
+     * @param element Method to search a given element
      */
-    private static <T> void search(T element) {
+    private <T extends Comparable<T>> void search(T element) {
         Node temp;
         temp = head;
         while (temp != null) {
@@ -112,10 +107,9 @@ public class UnOrderedList<T> {
 
     /**
      * @param <T>
-     * @param input
-     * Method to remove an element from the linkedList
+     * @param input Method to remove an element from the linkedList
      */
-    private static <T> void remove(T input) {
+    private <T> void remove(T input) {
         if (input.equals(head.data)) { // Removing the first element
             head = head.next;
             return;
@@ -142,7 +136,7 @@ public class UnOrderedList<T> {
     /**
      * Write into output file
      */
-    public static void writeFile() {
+    public void writeFile() {
         try {
             FileWriter writer = new FileWriter(
                     "/Users/stalincd/Documents/Assignments/Day19_20_dataStructures/data/unorderedlistOutput.txt");
