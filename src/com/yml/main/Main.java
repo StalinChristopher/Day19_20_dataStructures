@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 
 import com.yml.datastructures.BalancedParenthesis;
 import com.yml.datastructures.BankingCashCounter;
+import com.yml.datastructures.HashingFunction;
 import com.yml.datastructures.OrderedList;
 import com.yml.datastructures.PalindromeCheck;
 import com.yml.datastructures.UnOrderedList;
@@ -22,7 +23,9 @@ public class Main {
 		
 //		BankingCashCounter.bankingCashCounter();
 		
-		PalindromeCheck.palindromeCheck();
+//		PalindromeCheck.palindromeCheck();
+		
+		HashingFunction.hashingFunction();
 
 	}
 
