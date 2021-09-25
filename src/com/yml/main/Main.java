@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import com.yml.datastructures.BalancedParenthesis;
 import com.yml.datastructures.BankingCashCounter;
 import com.yml.datastructures.OrderedList;
+import com.yml.datastructures.PalindromeCheck;
 import com.yml.datastructures.UnOrderedList;
 
 public class Main {
@@ -19,7 +20,9 @@ public class Main {
 		
 //		BalancedParenthesis.balancedParenthesis();
 		
-		BankingCashCounter.bankingCashCounter();
+//		BankingCashCounter.bankingCashCounter();
+		
+		PalindromeCheck.palindromeCheck();
 
 	}
 
