@@ -2,6 +2,7 @@ package com.yml.main;
 
 import java.io.FileNotFoundException;
 
+import com.yml.datastructures.BalancedParenthesis;
 import com.yml.datastructures.OrderedList;
 import com.yml.datastructures.UnOrderedList;
 
@@ -12,8 +13,10 @@ public class Main {
 		// UnOrderedList o1 = new UnOrderedList();
 		// o1.unorderedList();
 		
-		OrderedList o2 = new OrderedList<>();
-		o2.run();
+//		OrderedList o2 = new OrderedList<>();
+//		o2.run();
+		
+		BalancedParenthesis.balancedParenthesis();
 
 	}
 
