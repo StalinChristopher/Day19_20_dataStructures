@@ -7,6 +7,7 @@ import com.yml.datastructures.BankingCashCounter;
 import com.yml.datastructures.HashingFunction;
 import com.yml.datastructures.OrderedList;
 import com.yml.datastructures.PalindromeCheck;
+import com.yml.datastructures.Prime2dArray;
 import com.yml.datastructures.UnOrderedList;
 
 public class Main {
@@ -25,7 +26,9 @@ public class Main {
 		
 //		PalindromeCheck.palindromeCheck();
 		
-		HashingFunction.hashingFunction();
+//		HashingFunction.hashingFunction();
+		
+		Prime2dArray.prime2DArray();
 
 	}
 
